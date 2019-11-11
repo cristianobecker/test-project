@@ -14,12 +14,12 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
-      },
-      { 
         "source": "/my-url",
         "function": "exampleFunction"
+      },
+      { 
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   }
