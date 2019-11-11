@@ -1,8 +1,12 @@
 import * as functions from 'firebase-functions';
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+const REGION = 'us-east1';
+const CONFIG = functions.config().any.key;
+
+
+export const exampleFunction = functions.region(REGION).https.onRequest((req, res) => {
+    console.log('exampleFunction()');
+
+    res.set('Cache-Control', 'private, max-age=0, s-maxage=0');
+    res.send('hi ' + CONFIG);
+   });
