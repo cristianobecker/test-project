@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "test-project-c5639"
+    "default": "test-project-c5639",
+    "development": "dev-test-project-b0d4b"
   }
 }
